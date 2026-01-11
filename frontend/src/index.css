@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================= GLOBAL RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: #000000;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ================= GLASS + INSTAGRAM THEME ================= */
+@layer utilities {
+
+  .glass-insta {
+    background: linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+    padding: 2px;
+    border-radius: 16px;
+  }
+
+  .glass-insta-inner {
+    background: #000;
+    border-radius: 14px;
+    padding: 24px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .glass-card {
+    background: linear-gradient(
+      45deg,
+      #f09433,
+      #e6683c,
+      #dc2743,
+      #cc2366,
+      #bc1888
+    );
+    padding: 1px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .glass-card-inner {
+    background: #000;
+    border-radius: 11px;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .glass-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(240, 148, 51, 0.25);
+  }
+
+  .gradient-insta {
+    background: linear-gradient(
+      45deg,
+      #f09433,
+      #e6683c,
+      #dc2743,
+      #cc2366,
+      #bc1888
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .btn-insta {
+    background: linear-gradient(
+      45deg,
+      #f09433,
+      #e6683c,
+      #dc2743,
+      #cc2366,
+      #bc1888
+    );
+    color: white;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .btn-insta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(240, 148, 51, 0.4);
+  }
+
+  .input-insta {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #fff;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .input-insta:focus {
+    outline: none;
+    border-image: linear-gradient(
+      45deg,
+      #f09433,
+      #e6683c,
+      #dc2743,
+      #cc2366,
+      #bc1888
+    ) 1;
+    box-shadow: 0 0 0 2px rgba(240, 148, 51, 0.25);
+  }
+
+  /* ================= FLOATING EFFECT ================= */
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .floating-delayed {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ================= LINKS ================= */
+a {
+  color: inherit;
+  text-decoration: none;
+}
